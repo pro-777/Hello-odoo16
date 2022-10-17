@@ -125,10 +125,8 @@ server {
 
 # Odoo 16 screenshots
 
-<img src="screenshots/odoo-15-welcome-screenshot.png" width="50%">
+<img src="screenshots/2022-10-17_22h16_21.png" width="50%">
 
-<img src="screenshots/odoo-15-apps-screenshot.png" width="100%">
+<img src="screenshots/2022-10-17_22h16_30.png" width="100%">
+<
 
-<img src="screenshots/odoo-15-sales-screen.png" width="100%">
-
-<img src="screenshots/odoo-15-product-form.png" width="100%">
