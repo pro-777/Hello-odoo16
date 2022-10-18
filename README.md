@@ -10,7 +10,7 @@ Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https
 curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-one 10015 20015
 ```
 
-to set up first Odoo instance @ `localhost:10015` (default master password: `pro.info`)
+to set up first Odoo instance @ `localhost:10015` (default master password: `mostafa@1234`)
 
 and
 
@@ -18,7 +18,7 @@ and
 curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-two 11015 21015
 ```
 
-to set up another Odoo instance @ `localhost:11015` (default master password: `pro.info`)
+to set up another Odoo instance @ `localhost:11015` (default master password: `mostafa@1234`)
 
 Some arguments:
 * First argument (**odoo-one**): Odoo deploy folder
@@ -78,7 +78,7 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 
 * To change Odoo configuration, edit file: **etc/odoo.conf**.
 * Log file: **etc/odoo-server.log**
-* Default database password (**admin_passwd**) is `pro.info`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
+* Default database password (**admin_passwd**) is `mostafa@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
 
 # Odoo container management
 
