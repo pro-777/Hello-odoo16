@@ -7,7 +7,7 @@ Installing Odoo 16 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-one 10015 20015
+curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-one 10016 20016
 ```
 
 to set up first Odoo instance @ `localhost:10015` (default master password: `mostafa@1234`)
@@ -15,15 +15,15 @@ to set up first Odoo instance @ `localhost:10015` (default master password: `mos
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-two 11015 21015
+curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-two 11016 21016
 ```
 
 to set up another Odoo instance @ `localhost:11015` (default master password: `mostafa@1234`)
 
 Some arguments:
 * First argument (**odoo-one**): Odoo deploy folder
-* Second argument (**10015**): Odoo port
-* Third argument (**20015**): live chat port
+* Second argument (**10016**): Odoo port
+* Third argument (**20016**): live chat port
 
 If `curl` is not found, install it:
 
@@ -40,11 +40,11 @@ Start the container:
 docker-compose up
 ```
 
-* Then open `localhost:10015` to access Odoo 15.0. If you want to start the server with a different port, change **10015** to another value in **docker-compose.yml**:
+* Then open `localhost:10016` to access Odoo 16.0. If you want to start the server with a different port, change **10016** to another value in **docker-compose.yml**:
 
 ```
 ports:
- - "10015:8069"
+ - "10016:8069"
 ```
 
 Run Odoo container in detached mode (be able to close terminal without stopping Odoo):
@@ -111,7 +111,7 @@ Configuring **nginx** to activate live chat feature (in production):
 server {
     #...
     location /longpolling/ {
-        proxy_pass http://0.0.0.0:20015/longpolling/;
+        proxy_pass http://0.0.0.0:20016/longpolling/;
     }
     #...
 }
@@ -121,7 +121,7 @@ server {
 # docker-compose.yml
 
 * odoo:16.0
-* postgres:14
+* postgres:16
 
 # Odoo 16 screenshots
 
