@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   db:
-    image: postgres:14
+    image: postgres:15
     user: root
     environment:
       - POSTGRES_USER=odoo
@@ -17,8 +17,8 @@ services:
     depends_on:
       - db
     ports:
-      - "10015:8069"
-      - "20015:8072" # live chat
+      - "10016:8069"
+      - "20016:8072" # live chat
     tty: true
     command: --
     environment:
