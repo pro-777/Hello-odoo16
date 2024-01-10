@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   db:
-    image: postgres:15
+    image: postgres:14.10
     user: root
     environment:
       - POSTGRES_USER=odoo
@@ -32,4 +32,20 @@ services:
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
     restart: always             # run as a service
-    
+
+  pgadmin:
+    image: fenglc/pgadmin4
+    ports:
+      - 5050:5050
+    restart: always
+    links:
+      - db:db
+    environment:
+      DEFAULT_USER: admin
+      DEFAULT_PASSWORD: YbrS9eP4!j
+     # VIRTUAL_HOST: 
+     # LETSENCRYPT_HOST:
+     # VIRTUAL_PORT: 5050
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+      #- /var/run/docker.sock:/tmp/docker.sock
